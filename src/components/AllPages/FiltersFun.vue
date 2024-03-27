@@ -1,0 +1,256 @@
+<template>
+    <div class="function">
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+        <div class="first-content">
+            <div class="first-text">
+                <h4>Правый клик - контекстное меню</h4>
+                <p> Запретите вспывающее меню по умолчанию</p>
+            </div>
+            <div class="first-checkbox">
+                <div>
+                    <p>Активно</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Предупреждение</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="notification">
+                <p>Оповещение:</p>
+                <span>Контестное меню запрещ ...</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style>
+.function {
+    width: 1120px;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.first-content {
+    width: 362px;
+    height: 216px;
+    background: #343549;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 14px;
+    margin-bottom: 18px;
+}
+
+.first-text {
+    border-bottom: 1px solid #fff;
+}
+
+.first-text p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.first-content h4 {
+    margin-bottom: 8px;
+}
+
+.first-checkbox {
+    width: 333px;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first-checkbox div {
+    display: flex;
+}
+
+.first-checkbox div p {
+    margin-right: 6px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+}
+
+.notification p {
+    margin-right: 14px;
+}
+
+.notification span {
+    height: 41px;
+    background: #28293B;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 8px 0 14px;
+    font-size: 15px;
+    border-radius: 12px;
+}
+</style>

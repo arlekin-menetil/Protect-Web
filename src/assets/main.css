@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/*active page*/
+.active_protect {
+  color: #fff;
+  border-radius: 8px;
+  background: url(../../public/icons/protect.svg) no-repeat center left 10px #6c5dd3;
+}
+.active_protect1 {
+  color: #fff;
+  border-radius: 8px;
+  background: url(../../public/icons/document.svg) no-repeat center left 10px #6c5dd3;
+}
+.active_protect2 {
+  color: #fff;
+  border-radius: 8px;
+  background: url(../../public/icons/Vector1.svg) no-repeat center left 10px #6c5dd3;
+}
+/*bgimage menu*/
+.protect {
+  background: url(../../public/icons/shield-check.svg) no-repeat center left 10px;
+}
+.jurnal-main {
+  background: url(../../public/icons/jurnal.svg) no-repeat center left 10px;
+}
+.black-list {
+  background: url(../../public/icons/blacklist.svg) no-repeat center left 10px;
+}
+.skan-virus {
+  background: url(../../public/icons/SkanVirus.svg) no-repeat center left 10px;
+}
+/*checkbox input*/
+input[type='checkbox'] {
+  position: relative;
+  width: 45px;
+  height: 16px;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  transition: 0.5s;
+  border-radius: 12px;
+  cursor: pointer;
+}
+input:checked[type='checkbox'] {
+  background: #9f76ff;
+}
+input[type='checkbox']:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 23px;
+  top: -4px;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+input:checked[type='checkbox']:before {
+  left: 20px;
+}
