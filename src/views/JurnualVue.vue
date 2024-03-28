@@ -1,19 +1,18 @@
 <script setup>
-import HeadMenu from '../components/AllPages/Jurnual/mainheader/MainSide.vue';
+import SideBar from './components/MenuNavigation/SideBar.vue';
+import HeadLine from './components/AllPages/MainSide.vue';
 </script>
 
 <template>
-    <div class="Juarnal">
-        <HeadMenu />
+    <main class="Juarnal">
 
-    </div>
+    </main>
 </template>
 
 <style>
 .Juarnal {
-    width: 1440px;
-    height: 1024px;
-    background: url(../../../public/bg/background2.svg);
-    background-size: contain;
+    width: 100%;
+    height: 100%;
+
 }
 </style>

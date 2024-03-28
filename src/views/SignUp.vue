@@ -67,10 +67,7 @@ export default {
 <style>
 main {
     width: 100%;
-    height: 100vh;
-    background: url('../../public/bg/SIGNUP.png') center center;
-    background-size: 100% 100vh;
-    background-repeat: no-repeat;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,19 +1,17 @@
 <script setup>
-import HeadMenu from '../components/AllPages/MainSide.vue';
+import SideBar from './components/MenuNavigation/SideBar.vue';
+import HeadLine from './components/AllPages/MainSide.vue';
 </script>
 
 <template>
-  <div class="Protection">
-    <HeadMenu />
+  <main class="Protection">
 
-  </div>
+  </main>
 </template>
 
 <style>
 .Protection {
-  width: 1440px;
-  height: 1024px;
-  background: url(../../../public/bg/background2.svg);
-  background-size: contain;
+  width: 100%;
+  height: 110vh;
 }
 </style>

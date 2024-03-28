@@ -185,7 +185,8 @@
 
 <style>
 .function {
-    width: 1120px;
+    width: 100%;
+    height: auto;
     padding-top: 16px;
     display: flex;
     justify-content: space-between;

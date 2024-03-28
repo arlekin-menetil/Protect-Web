@@ -1,19 +1,17 @@
 <script setup>
-import HeadMenu from '../components/AllPages/Jurnual/mainheader/MainBlack.vue';
+import SideBar from './components/MenuNavigation/SideBar.vue';
+import HeadLine from './components/AllPages/MainSide.vue';
 </script>
 
 <template>
-    <div class="BlackList">
-        <HeadMenu />
+    <main class="BlackList">
 
-    </div>
+    </main>
 </template>
 
 <style>
 .BlackList {
-    width: 1440px;
-    height: 1024px;
-    background: url(../../../public/bg/background2.svg);
-    background-size: contain;
+    width: 100%;
+    height: 100%;
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import funct from '../AllPages/FiltersFun.vue'
+import funct from '../../components/Twice/FiltersFun.vue'
 </script>
 
 <template>

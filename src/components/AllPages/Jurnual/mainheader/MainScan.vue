@@ -1,24 +1,9 @@
 <script setup>
-import jquery from '../AllPages/JqueryFun.vue'
+import jquery from '../../components/Twice/JqueryFun.vue'
 </script>
 
 <template>
     <div class="content-protect">
-        <div class="content-menu">
-            <div class="logo-menu">
-                <img src="../../../public/logo/gerb.png" />
-                <h5>"PROTECTION WEB APPS FROM <br>WEB VIRUSES"</h5>
-            </div>
-            <nav>
-                <ul>
-                    <li><a class="active_protect" href="/Protect">Защита
-                            контента</a></li>
-                    <li><a class="jurnal-main" href="/Jurnual">Журналы угроз</a></li>
-                    <li><a class="black-list" href="#">Черный список</a></li>
-                    <li><a class="skan-virus" href="#">Сканер вирусов</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="HeadMenu">
             <div class="panel_up">
                 <div class="search">
@@ -31,7 +16,6 @@ import jquery from '../AllPages/JqueryFun.vue'
                             alt="">Настройки</a>
                 </div>
             </div>
-            <jquery />
         </div>
 
     </div>

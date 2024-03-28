@@ -10,12 +10,12 @@ const router = createRouter({
       component: SignUp
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/SkanVirus',
+      name: 'SkanVirus',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/SkanVirus.vue')
     },
     {
       path: '/Protect',
@@ -31,7 +31,12 @@ const router = createRouter({
       path: '/BlackList',
       name: 'BlackList',
       component: () => import('../views/BlackList.vue')
-    }
+    },
+    {
+      path: '/Sidebar',
+      name: 'Sidebar',
+      component: () => import('../../src/components/MenuNavigation/SideBar.vue')
+    },
   ]
 })
 
