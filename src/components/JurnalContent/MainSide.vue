@@ -1,5 +1,5 @@
 <script setup>
-import jquery from '../../components/Twice/JqueryFun.vue'
+import jquery from '@/components/JurnalContent/JqueryFun.vue'
 </script>
 
 <template>
@@ -16,6 +16,7 @@ import jquery from '../../components/Twice/JqueryFun.vue'
                             alt="">Настройки</a>
                 </div>
             </div>
+            <jquery />
         </div>
 
     </div>
@@ -109,6 +110,7 @@ nav ul li a {
     padding-left: 20px;
     background: #28293B;
     color: #fff;
+    outline: none;
 }
 
 .search input[placeholder] {

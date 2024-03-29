@@ -186,12 +186,11 @@
 <style>
 .function {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding-top: 16px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 18px;
 }
 
 .first-content {
@@ -203,7 +202,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 0 14px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .first-text {

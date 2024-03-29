@@ -5,7 +5,7 @@
   font-family: "Inter", sans-serif;
 }
 body{
-  background: url('../public/bg/background2.svg');
+  background: url('../public/bg/background2.svg') 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -15,22 +15,7 @@ a {
 li {
   list-style: none;
 }
-/*active page*/
-.active_protect {
-  color: #fff;
-  border-radius: 8px;
-  background: url(../../public/icons/protect.svg) no-repeat center left 10px #6c5dd3;
-}
-.active_protect1 {
-  color: #fff;
-  border-radius: 8px;
-  background: url(../../public/icons/document.svg) no-repeat center left 10px #6c5dd3;
-}
-.active_protect2 {
-  color: #fff;
-  border-radius: 8px;
-  background: url(../../public/icons/Vector1.svg) no-repeat center left 10px #6c5dd3;
-}
+
 /*bgimage menu*/
 .protect {
   background: url(../../public/icons/shield-check.svg) no-repeat center left 10px;
