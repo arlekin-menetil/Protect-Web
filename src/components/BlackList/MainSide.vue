@@ -1,5 +1,5 @@
 <script setup>
-import jquery from '@/components/JurnalContent/JqueryFun.vue'
+import Text from '@/components/BlackList/TextBlack.vue'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import jquery from '@/components/JurnalContent/JqueryFun.vue'
                             alt="">Настройки</a>
                 </div>
             </div>
-            <jquery />
+            <Text />
         </div>
 
     </div>

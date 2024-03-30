@@ -1,5 +1,5 @@
 <script setup>
-import funct from '@/components/JurnalContent/FiltersFun.vue'
+import DataTable from '@/components/BlackList/ListBlack.vue'
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import funct from '@/components/JurnalContent/FiltersFun.vue'
                 <a href="#">Сохранить</a>
             </div>
         </div>
-        <funct />
+        <DataTable />
     </div>
 </template>
 
