@@ -1,17 +1,10 @@
 <script setup>
-import {ref} from 'vue'
-
-const is_expanded = ref(false)
-
-const ToggleMenu = () => {
-    is_expanded.value = !is_expanded.value
-}
 </script>
 
 
 
 <template>
-    <aside :class="`${is_expanded && 'is-expanded'}`">
+    <aside>
         <div class="logo" >
             <img src="../../../public/logo/gerb.png" alt="">
             <p>"PROTECTION WEB APPS FROM <br>WEB VIRUSES"</p>
@@ -29,9 +22,18 @@ const ToggleMenu = () => {
                 <ul>
                     <li><a class="protect" href="/Protect">Защита
                             контента</a></li>
-                    <li><a class="jurnal-main" href="/Jurnual">Журналы угроз</a></li>
+                    <li><a class="jurnal-main" href="/Jurnual">Журналы угроз</a>
+                    <ul>
+                        <li><a href="">Все логи</a></li>
+                        <li><a href="">SQLI логи</a></li>
+                        <li><a href="">ДОС</a></li>
+                        <li><a href="">Спам логи</a></li>
+                        <li><a href="">Логи прокси</a></li>
+                        <li><a href="">Другие логи</a></li>
+                    </ul>
+                    </li>
                     <li><a class="black-list" href="/BlackList">Черный список</a></li>
-                    <li><a class="skan-virus" href="">Сканер вирусов</a></li>
+                    <li><a class="skan-virus" href="/SkanVirus">Сканер вирусов</a></li>
                 </ul>
             </nav>
         </div>

@@ -5,26 +5,17 @@ import DataTable from '@/components/BlackList/ListBlack.vue'
 <template>
     <div class="jquery">
         <h2>Защита контента</h2>
-        <div class="juquery_content">
-            <div class="checkbox">
-                <p>Включит JQuery</p>
-                <input type="checkbox">
-            </div>
-            <div class="check_text">
-                <p>Включите эту опцию, если на вашем сайте нет файла jquery</p>
-            </div>
-            <div class="check_save">
-                <a href="#">Сохранить</a>
-            </div>
-        </div>
         <DataTable />
+        <div class="Ban_ip">
+
+        </div>
     </div>
 </template>
 
 <style>
 .jquery {
     width: 100%;
-    height: 133px;
+    height: 143px;
     position: relative;
     top: 0;
     padding: 32px 32px 16px 32px;
