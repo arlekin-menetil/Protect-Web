@@ -45,7 +45,7 @@ aside{
     flex-direction: column;
     align-items: center;
     width: calc(2rem+32px);
-    min-height: 100vh;
+     height: 100vh;
     padding: 10px 14px;
     overflow: hidden;
     background: #343549;

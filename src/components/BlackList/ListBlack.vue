@@ -5,7 +5,7 @@ export default {
       sortKey: '',
       search: '',
       reverse: false,
-      columns: ['ID', 'IP', 'Date', 'Browser', 'OS', 'Country', 'Type'],
+      columns: ['ID', 'IP', 'Date', 'Browser', 'OS', 'Country', 'Type','Details'],
       people: [
         { ID: 0, IP: '127.0.0.1', Date: '10.05.2024', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
         { ID: 3, IP: '127.0.0.2', Date: '10.05.2023', Browser: 'Unkown', OS: 'Windows 8', Country: 'United State', Type: '</>SQLI' },
@@ -13,13 +13,6 @@ export default {
         { ID: 87, IP: '127.0.0.7', Date: '10.05.2020', Browser: 'Unkown', OS: 'Windows 9', Country: 'United State', Type: '</>SQLI' },
         { ID: 12, IP: '127.0.0.8', Date: '10.05.2025', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
         { ID: 1, IP: '127.0.0.9', Date: '10.05.2026', Browser: 'Unkown', OS: 'Windows 7', Country: 'Brazil', Type: '</>SQLI' },
-        { ID: 6, IP: '127.0.0.10', Date: '10.05.2028', Browser: 'Unkown', OS: 'Windows 7', Country: 'Kanada', Type: '</>SQLI' },
-        { ID: 2, IP: '127.0.0.12', Date: '10.05.2027', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
-        { ID: 4, IP: '127.0.0.15', Date: '10.05.2018', Browser: 'Unkown', OS: 'Windows 7', Country: 'Spanish', Type: '</>SQLI' },
-        { ID: 9, IP: '127.0.0.17', Date: '10.05.2019', Browser: 'Unkown', OS: 'Windows 7', Country: 'Italia', Type: '</>SQLI' },
-        { ID: 10, IP: '127.0.0.19', Date: '10.05.2016', Browser: 'Unkown', OS: 'Windows 7', Country: 'France', Type: '</>SQLI' },
-        { ID: 11, IP: '127.0.0.13', Date: '10.05.2015', Browser: 'Unkown', OS: 'Windows 7', Country: 'Germany', Type: '</>SQLI' },
-        { ID: 7, IP: '127.0.0.14', Date: '10.05.2014', Browser: 'Unkown', OS: 'Windows 7', Country: 'Great Britan', Type: '</>SQLI' },
       ],
     };
   },
@@ -47,7 +40,18 @@ export default {
 <template>
   <div class="container">
     <div id="vue-table">
-      <input type="text" v-model="search" class="form-control" />
+      <div class="container_search">
+          <div class="choose">
+            <h3>Show</h3>
+            <select name="select" id="">
+              <option value="10">10</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+              <input type="text" v-model="search" class="form-control" />
+      </div>
+
       <table class="table table-striped">
         <thead>
           <tr>
@@ -67,9 +71,12 @@ export default {
             <td>{{ person.OS }}</td>
             <td>{{ person.Country }}</td>
             <td>{{ person.Type }}</td>
-            <td><a href="#">Детяли</a><a href=""></a><a href=""></a></td>
+            <td>{{ person.Details }}<button>Детали</button><button>Unban</button><button>Delete</button></td>
           </tr>
         </tbody>
+        <div class="delete_all">
+
+        </div>
       </table>
     </div>
   </div>
@@ -77,20 +84,63 @@ export default {
 
 <style scoped>
 .container{
-  background: #343549;  
+  width: 100%;
+  height: auto;
+  background: #343549;
+  margin-top: 72px;  
+  border-radius: 12px;
 }
-#vue-table {
-  margin: 2em 0;
-}
-
 #vue-table a {
   font-weight: bold;
   text-decoration: none;
 }
-
-#vue-table a.active {
-  font-weight: bold;
-  color: black;
-  text-decoration: underline;
+table{
+width: 100%;
+padding:  10px 20px;
+}
+table thead{
+  background: #1A1A1A;
+}
+table th{
+  height: 44px;
+}
+table a{
+  color: #fff;
+  width: 83px;
+  height: 20px;
+  padding:15px 50px;
+}
+table a:first-child{
+  background: url('../../../public/logo/gerb.png');
+}
+table td{
+  background: #454659;
+  height: 52px;
+  padding-left: 12px;
+}
+.container_search{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+.choose{
+  width: 160px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choose select{
+  width: 99px;
+  height: 44px;
+  border-radius: 10px;
+  background: #28293B;
+  color: #fff;
+  padding-left: 5px;
+}
+.choose option{
+  height: 100%;
 }
 </style>

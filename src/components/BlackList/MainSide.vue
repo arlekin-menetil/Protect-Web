@@ -25,7 +25,7 @@ import Text from '@/components/BlackList/TextBlack.vue'
 <style>
 .content-protect {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-family: "Inter", sans-serif;
     display: flex;
 
