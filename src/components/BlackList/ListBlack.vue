@@ -1,11 +1,21 @@
 <script>
+
 export default {
+  
   data() {
     return {
       sortKey: '',
       search: '',
       reverse: false,
-      columns: ['ID', 'IP', 'Date', 'Browser', 'OS', 'Country', 'Type','Details'],
+      columns: [
+        { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID' },
+        { icon: ['far', 'user'], icon2: ['fa', 'repeat'], name: 'IP' },
+        { icon: ['far', 'calendar'], icon2:  ['fa', 'repeat'], name: 'Date' },
+        { icon: ['fas', 'globe'], icon2: ['fa', 'repeat'], name: 'Browser' },
+        { icon: ['fa', 'laptop'], icon2: ['fa', 'repeat'], name: 'OS' },
+        { icon: ['fas', 'share'], icon2: ['fa', 'repeat'], name: 'Country' },
+        { icon: ['fa', 'wand-magic-sparkles'], icon2: ['fa', 'repeat'], name: 'Type' },
+        { icon: ['fa', 'cog'], icon2: ['fa', 'repeat'], name: 'Details' }],
       people: [
         { ID: 0, IP: '127.0.0.1', Date: '10.05.2024', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
         { ID: 3, IP: '127.0.0.2', Date: '10.05.2023', Browser: 'Unkown', OS: 'Windows 8', Country: 'United State', Type: '</>SQLI' },
@@ -34,22 +44,23 @@ export default {
         });
     },
   },
-};
+};''
+
 </script>
 
 <template>
   <div class="container">
     <div id="vue-table">
       <div class="container_search">
-          <div class="choose">
-            <h3>Show</h3>
-            <select name="select" id="">
-              <option value="10">10</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-          </div>
-              <input type="text" v-model="search" placeholder="Search:" class="form-control" />
+        <div class="choose">
+          <h3>Show</h3>
+          <select name="select" id="">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <input type="text" v-model="search" placeholder="Search:" class="form-control" />
       </div>
 
       <table class="table table-striped">
@@ -57,7 +68,8 @@ export default {
           <tr>
             <th v-for="column in columns" :key="column">
               <a href="#" @click="sortBy(column)" :class="{ active: sortKey === column }">
-                {{ column }}
+                <font-awesome-icon class="icon" :icon=column.icon /><div>{{ column.name }}</div><font-awesome-icon class="icon" :icon=column.icon2 />
+
               </a>
             </th>
           </tr>
@@ -82,30 +94,33 @@ export default {
       <div class="delete_all">
         <h3>Showing 1 to 1 of 1 entries</h3>
         <button>Удалить все</button>
-                </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.container{
+.container {
   width: 100%;
   height: auto;
   background: #343549;
-  margin-top: 72px;  
+  margin-top: 72px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
 }
+
 #vue-table a {
   font-weight: bold;
   text-decoration: none;
 }
-table{
-width: 100%;
-padding:  10px 20px;
+
+table {
+  width: 100%;
+  padding: 10px 20px;
 }
-.container_search input{
+
+.container_search input {
   width: 233px;
   height: 44px;
   outline: none;
@@ -115,27 +130,39 @@ padding:  10px 20px;
   border: none;
   border-radius: 10px;
 }
-table thead{
+
+table thead {
   background: #28293B;
 }
-table th{
+
+table th {
   height: 44px;
 }
-table a{
+
+table a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   color: #fff;
-  width: 83px;
+  width: 100%;
   height: 20px;
-  padding:15px 50px;
 }
-table a:first-child{
+
+table .icon {
+  padding:0 15px;
+}
+
+table a:first-child {
   background: url('../../../public/logo/gerb.png');
 }
-table td{
+
+table td {
   background: #454659;
   height: 52px;
   padding-left: 12px;
 }
-table button{
+
+table button {
   width: 70px;
   height: 32px;
   background: none;
@@ -145,30 +172,36 @@ table button{
   margin: 0 5px;
   color: #fff;
 }
-.detals{
+
+.detals {
   background: #6C5DD3;
 }
-.unban{
+
+.unban {
   background: #4DD137;
 }
-.delete{
+
+.delete {
   background: #C30000;
 }
-.container_search{
+
+.container_search {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
 }
-.choose{
+
+.choose {
   width: 160px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.choose select{
+
+.choose select {
   width: 99px;
   height: 44px;
   border-radius: 10px;
@@ -176,16 +209,19 @@ table button{
   color: #fff;
   padding-left: 5px;
 }
-.choose option{
+
+.choose option {
   height: 100%;
 }
-.delete_all{
+
+.delete_all {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 32px 20px;
 }
-.delete_all button{
+
+.delete_all button {
   background: #C30000;
   width: 170px;
   height: 44px;
