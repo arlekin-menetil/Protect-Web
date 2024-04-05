@@ -8,7 +8,7 @@ export default {
       search: '',
       reverse: false,
       columns: [
-        { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID' },
+        { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID', sort: 'ID'},
         { icon: ['far', 'user'], icon2: ['fa', 'repeat'], name: 'IP' },
         { icon: ['far', 'calendar'], icon2:  ['fa', 'repeat'], name: 'Date' },
         { icon: ['fas', 'globe'], icon2: ['fa', 'repeat'], name: 'Browser' },
@@ -29,7 +29,6 @@ export default {
   methods: {
     sortBy(sortKey) {
       this.reverse = this.sortKey === sortKey ? !this.reverse : false;
-      this.sortKey = sortKey;
     },
   },
   computed: {
@@ -67,8 +66,13 @@ export default {
         <thead>
           <tr>
             <th v-for="column in columns" :key="column">
-              <a href="#" @click="sortBy(column)" :class="{ active: sortKey === column }">
-                <font-awesome-icon class="icon" :icon=column.icon /><div>{{ column.name }}</div><font-awesome-icon class="icon" :icon=column.icon2 />
+              <a href="#" :class="{ active: sortKey === column }">
+                <font-awesome-icon class="icon" :icon=column.icon /><div>{{ column.name }}</div><font-awesome-icon class="icon" :icon=column.icon2 @click="() => {
+                  if(column.sort) {
+                    sortKey = column.sort
+                    sortBy(column.sort)
+                  }
+                }"/>
 
               </a>
             </th>
