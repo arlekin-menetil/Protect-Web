@@ -28,14 +28,64 @@ const router = createRouter({
       component: () => import('../views/JurnualVue.vue')
     },
     {
+      path: '/AllLogi',
+      name: 'AllLogi',
+      component: () => import('../../src/components/JurnalContent/OtherPages/AllLogi.vue')
+    },
+    {
+      path: '/AllSqli',
+      name: 'AllSqli',
+      component: () => import('../../src/components/JurnalContent/OtherPages/AllSqli.vue')
+    },
+    {
+      path: '/DosPage',
+      name: 'DosPage',
+      component: () => import('../../src/components/JurnalContent/OtherPages/DosPage.vue')
+    },
+    {
+      path: '/LogiProxy',
+      name: 'LogiProxy',
+      component: () => import('../../src/components/JurnalContent/OtherPages/LogiProxy.vue')
+    },
+    {
+      path: '/OtherLog',
+      name: 'OtherLog',
+      component: () => import('../../src/components/JurnalContent/OtherPages/OtherLog.vue')
+    },
+    {
+      path: '/SpamPage',
+      name: 'SpamPage',
+      component: () => import('../../src/components/JurnalContent/OtherPages/SpamPage.vue')
+    },
+    {
+      path: '/SqliPage',
+      name: 'SqliPage',
+      component: () => import('../../src/components/JurnalContent/OtherPages/SqliPage.vue')
+    },
+    {
       path: '/BlackList',
       name: 'BlackList',
       component: () => import('../views/BlackList.vue')
     },
     {
-      path: '/Sidebar',
-      name: 'Sidebar',
-      component: () => import('../../src/components/Sidebar.vue')
+      path: '/BlackIP',
+      name: 'BlackIP',
+      component: () => import('../../src/components/BlackList/OtherPage/BlackListIP.vue')
+    },
+    {
+      path: '/BlackCountry',
+      name: 'BlackCountry',
+      component: () => import('../../src/components/BlackList/OtherPage/BlackListCountry.vue')
+    },
+    {
+      path: '/OtherBan',
+      name: 'OtherBan',
+      component: () => import('../../src/components/BlackList/OtherPage/OtherBan.vue')
+    },
+    {
+      path: '/SkanVirus',
+      name: 'SkanVirus',
+      component: () => import('../views/SkanVirus.vue')
     },
   ]
 })

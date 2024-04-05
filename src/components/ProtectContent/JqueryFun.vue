@@ -57,4 +57,16 @@ import funct from '@/components/ProtectContent/FiltersFun.vue'
     background: #6C5DD3;
     color: #fff;
 }
+@media (max-width: 1366px) {
+    .jquery{
+    width: 100%;
+    height: 67px;
+    position: relative;
+    top: 0;
+    color: #fff;
+}
+.jquery h2 {
+    margin-bottom: 5px;
+}
+}
 </style>

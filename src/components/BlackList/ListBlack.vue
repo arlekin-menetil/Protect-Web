@@ -1,5 +1,6 @@
 <script>
 
+
 export default {
   
   data() {
@@ -83,12 +84,13 @@ export default {
             <td>{{ person.ID }}</td>
             <td>{{ person.IP }}</td>
             <td>{{ person.Date }}</td>
-            <td>{{ person.Browser }}</td>
-            <td>{{ person.OS }}</td>
-            <td>{{ person.Country }}</td>
-            <td>{{ person.Type }}</td>
+            <td>{{ person.Redirection }}</td>
+            <td>{{ person.Autobahn }}</td>
             <td>{{ person.Details }}
-              <button class="detals">Детали</button>
+              <button class="detals">
+  
+                Детали
+              </button>
               <button class="unban">Unban</button>
               <button class="delete">Delete</button>
             </td>
@@ -182,11 +184,13 @@ table button {
 }
 
 .unban {
-  background: #4DD137;
+  background:url(../../../public/icons/ban.svg) no-repeat #4DD137 center left 6px;
+  padding-left: 23px;
 }
 
 .delete {
-  background: #C30000;
+  background:url(../../../public/icons/ban.svg) no-repeat #C30000 center left 6px;
+  padding-left: 23px;
 }
 
 .container_search {
@@ -226,7 +230,8 @@ table button {
 }
 
 .delete_all button {
-  background: #C30000;
+  background:url(../../../public/icons/trash.svg) no-repeat #C30000 center left 24px;
+  padding-left: 30px;
   width: 170px;
   height: 44px;
   border: none;

@@ -57,4 +57,31 @@ import funct from '@/components/JurnalContent/FiltersFun.vue'
     background: #6C5DD3;
     color: #fff;
 }
+@media (max-width: 1366px) {
+    .jquery{
+    width: 100%;
+    height: 67px;
+    position: relative;
+    top: 0;
+    color: #fff;
+}
+.jquery h2 {
+    margin-bottom: 5px;
+}
+.juquery_content {
+    height: 67px;
+    background: #343549;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 12px;
+}
+.checkbox {
+    width: 184px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+}
 </style>

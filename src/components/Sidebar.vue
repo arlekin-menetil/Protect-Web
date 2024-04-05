@@ -1,81 +1,231 @@
-<template>
-	<div id="sidebar">
-		<!--Sidebar with Dimmer -->
-		<div class="fixed inset-0 flex z-40">
-			<!-- Sidebar -->
-			<div
-				class="absolute flex top-0 h-screen z-20"
-				:class="[right ? 'right-0 flex-row' : 'left-0 flex-row-reverse']"
-			>
-				<!--Drawer -->
-				<button
-					@click.prevent="toggle()"
-					class="w-12 h-48 p-1 my-auto rounded text-white bg-gray-600 text-center focus:outline-none hover:bg-gray-500 transition-color duration-300"
-				>
-					<span
-						:class="[right ? '-rotate-90' : 'rotate-90']"
-						class="block transform origin-center font-bold"
-					>
-						Drawer
-					</span>
-				</button>
-
-				<!-- Sidebar Content -->
-				<div
-					ref="content"
-					class="transition-all duration-700 bg-yellow-200 overflow-hidden flex items-center justify-center"
-					:class="[open ? 'max-w-lg' : 'max-w-0']"
-				>
-					<div class="w-48 text-center font-bold text-xl">Sidebar</div>
-					<slot></slot>
-				</div>
-			</div>
-
-			<transition name="fade">
-				<!-- Dimmer -->
-				<div
-					v-if="dimmer && open"
-					@click="toggle()"
-					class="flex-1 bg-gray-400 bg-opacity-75 active:outline-none z-10"
-				/>
-			</transition>
-		</div>
-
-		<!-- Page Content -->
-		<div
-			class="absolute inset-1/2 rounded bg-green-500 w-1/2 h-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center text-white"
-		>
-			Page Content
-		</div>
-	</div>
-</template>
-
 <script>
 export default {
-	data() {
-		return {
-			open: false,
-			dimmer: true,
-			right: false
-		};
-	},
-	methods: {
-		toggle() {
-			this.open = !this.open;
-		}
-	}
+  data() {
+    return {
+      isSidebarClosed: true
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarClosed = !this.isSidebarClosed;
+    }
+  }
 };
 </script>
 
-<style>
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 1s ease-out;
+<template>
+    <aside :class="{ close: isSidebarClosed, open: !isSidebarClosed }" class="close">
+        <div class="up-menu">
+        <div class="logo" >
+            <div class="logo_img"><img src="../../../public/logo/gerb.png" alt=""></div>
+            <p>"PROTECTION WEB APPS FROM <br>WEB VIRUSES"</p>
+        </div>
+        <div @click="toggleSidebar" class="doble_arrow">
+            <span class="material-symbols-outlined"> double_arrow</span>
+        </div>
+    </div>
+        <div class="content-menu">
+            <nav>
+                <ul>
+                    <li class="">
+                        <a href="/Protect">
+                        <span style="margin-right: 8px;" class="material-symbols-outlined"> verified_user</span>
+                        <p>Защита контента</p></a>
+                        </li>
+                        <li class="jurnal">
+                        <a class="jurnal" href="/Jurnual">
+                            <span style="margin-right: 8px;" class="material-symbols-outlined"> description</span>
+                            <p>Журналы угроз</p></a>
+                            <ul>
+                                <li><a href="/AllLogi">Все логи</a></li>
+                                <li><a href="/SqliPage">SQLI логи</a></li>
+                                <li><a href="/DosPage">ДОС</a></li>
+                                <li><a href="/SpamPage">Спам логи</a></li>
+                                <li><a href="/LogiProxy">Логи прокси</a></li>
+                                <li><a href="/OtherLog">Другие логи</a></li>
+                            </ul>
+                            </li>
+                            <li>
+                            <a class="blacklist" href="/BlackList">
+                                <span style="margin-right: 8px;" class="material-symbols-outlined"> block</span>
+                                <p>Черный список</p></a>
+                                <ul style="height: 133px;">
+                                    <li><a href="/BlackIP">Черный список по IP</a></li>
+                                    <li><a href="/BlackCountry">Черный список стран</a></li>
+                                    <li><a href="/OtherBan">Другие баны</a></li>
+                                </ul>
+                                </li>
+                                <li>
+                                <a href="/SkanVirus">
+                                    <span style="margin-right: 8px;" class="material-symbols-outlined"> document_scanner</span>
+                                    <p>Сканер вирусов</p></a>
+                                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+</template>
+
+
+<style scoped>
+
+aside {
+position: relative;
+width: 254px;
+height: 100%;
+top: 0;
+left: 0;
+background: #343549;
+color: #D6D6D6;
+transition: width 0.5s;
+}
+/*стили для двойной кнопки*/
+.close {
+    width: 78px;
+  }
+.close .up-menu{
+    border: none;
+}
+.close .doble_arrow{
+    right: 23px;
+}
+.close .logo{
+    opacity: 0;
+    }
+.close .content-menu p{
+opacity: 0;
+}
+.close .content-menu span{
+    padding-left: 5px;
+    }
+.close .doble_arrow{
+    border: none;
+}   
+/**/
+.open {
+    width: 254px;
+  }
+.open .up-menu{
+    border: none;
+}
+.open .doble_arrow {
+    transform: rotate(180deg);
+  }
+.open .logo{
+    opacity: 1;
+    }
+.open .content-menu p{
+opacity: 1;
+}
+.open .content-menu span{
+    padding-left: 5px;
+    }
+/**/
+.up-menu{
+    width: 254px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #30313E;
+    border-right: 1px solid #30313E;
+}
+aside .logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #D6D6D6;
+    font-size: 8px;
+    margin: 14px 0 14px 10px;
+    width: 192px;
+    height: 53px;
 }
 
-.fade-enter,
-.fade-leave-to {
-	opacity: 0;
+.logo_img{
+    width: 96.21px;
+    height: 29px
+}
+
+.logo_img img{
+    width: 100%;
+    height: 100%;
+}
+
+aside nav ul{
+    width: 100%;
+    list-style: none;
+    padding: 20px 12px;
+}
+
+aside nav ul li a{
+    color: #D6D6D6;
+    display: block;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px 10px 10px;
+}
+aside nav ul li a:hover{
+    color: #fff;
+    display: block;
+    background: #6C5DD3;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+aside nav ul ul{
+    position: static;
+    margin: 5px 0;
+    width: 230px;
+    height: 254px;
+    background: #28293B;
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+aside nav ul ul li{
+line-height: 28px;
+border-bottom: none;
+}
+aside nav ul ul li a{
+width: 100%;
+height: 28px;
+font-size: 15px;
+color: #D6D6D6;
+display: flex;
+align-items: center;
+border-radius: 12px;
+}
+
+aside nav ul li:hover ul{
+    position: absolute;
+    display: flex;
+    transition: 0.5s ease;
+    animation: 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+aside nav ul ul li a:hover{
+background: none;
+}
+aside .doble_arrow{
+    position: absolute;
+    top:px;
+    right: 10px;
+    cursor: pointer;
+    background: #28293B;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
 }
 </style>
+
