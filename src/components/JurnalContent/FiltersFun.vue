@@ -253,4 +253,55 @@
     font-size: 15px;
     border-radius: 12px;
 }
+@media (max-width: 1366px) {
+    .first-content{
+        width: 262px;
+        height: 116px;
+        background: #343549;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 5px;
+    }
+    .first-content h4 {
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+    .first-text p {
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .first-checkbox {
+        width: 166.5px;
+        height: 12px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .notification span {
+        height: 20px;
+        background: #28293B;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 0 8px 0 14px;
+        font-size: 8px;
+        border-radius: 12px;
+    }
+    .first-checkbox div{
+        display: flex;
+        align-items: center;
+    }
+    .first-checkbox div:first-child{
+        margin-right: 10px;
+    }
+    .first-checkbox p{
+        font-size: 13px;
+    }
+    .notification p{
+        font-size: 13px;
+
+    }
+}
 </style>

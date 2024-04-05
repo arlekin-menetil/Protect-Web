@@ -28,55 +28,7 @@ import jquery from '@/components/JurnalContent/JqueryFun.vue'
     height: 100%;
     font-family: "Inter", sans-serif;
     display: flex;
-
 }
-
-.content-menu {
-    width: 254px;
-    height: 100%;
-    background: #343549;
-}
-
-.logo-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 14px 0 0 0;
-    color: #fff;
-}
-
-.logo-menu img {
-    width: 96.21px;
-    height: 29px;
-    margin: 0 0 4px 0;
-}
-
-nav {
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 35px;
-}
-
-nav ul li {
-    width: 230px;
-    height: 56px;
-
-}
-
-nav ul li a {
-    padding: 12.5px 56px 12.5px 40px;
-    color: #D6D6D6;
-    padding-left: 44px;
-}
-
 /*Line menu*/
 
 .HeadMenu {
