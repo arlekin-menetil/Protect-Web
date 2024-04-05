@@ -55,9 +55,18 @@ export default {
       <table class="table table-striped">
         <thead>
           <tr>
-            <th v-for="column in columns" :key="column">
+            <th v-for="column in columns" :key="column" >
               <a href="#" @click="sortBy(column)" :class="{ active: sortKey === column }">
+                <img v-if="column === 'ID'" src="/icons/list.svg" width="15px" height="15px" alt="List icon" />
+                <img v-if="column === 'IP'" width="17" height="17" src="/icons/user.svg" alt="user icon"/>
+                <img v-if="column === 'Date'" width="15" height="15" src="/icons/calendar.svg" alt="calendar icon"/>
+                <img v-if="column === 'Browser'" width="15" height="15" src="/icons/browser.svg" alt="browser icon"/>
+                <img v-if="column === 'Country'" width="15" height="15" src="/icons/location.svg" alt="country icon"/>
+                <img v-if="column === 'Type'" width="15" height="15" src="/icons/type.svg" alt="type icon"/>
+                <img v-if="column === 'Details'" width="15" height="15" src="/icons/details.svg" alt="details icon"/>
+                <img v-if="column === 'OS'" width="15" height="15" src="/icons/os.svg" alt="os icon"/>
                 {{ column }}
+                <!-- <img v-if="column === 'ID'" src="/icons/sortless.svg" width="25px" height="25px" alt="List icon" /> -->
               </a>
             </th>
           </tr>
@@ -72,8 +81,8 @@ export default {
             <td>{{ person.Country }}</td>
             <td>{{ person.Type }}</td>
             <td>{{ person.Details }}
-              <button class="detals">Детали</button>
-              <button class="unban">Unban</button>
+              <button  class="detals">Детали</button>
+              <button  class="unban">Unban</button>
               <button class="delete">Delete</button>
             </td>
           </tr>
@@ -88,6 +97,7 @@ export default {
 </template>
 
 <style scoped>
+
 .container{
   width: 100%;
   height: auto;
