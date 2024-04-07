@@ -236,10 +236,9 @@ export default {
   border-radius: 12px;
   display: flex;
   padding: 0 5px;
-  background: url();
 }
 .vue-table{
-  width: 1122px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -402,6 +401,7 @@ table button {
 #vue-table-OC button{
   height: 44px;
   width: 245px;
+  font-size: 14px;
   cursor: pointer;
 }
 #vue-table-OC button:first-child{
@@ -422,24 +422,23 @@ table button {
     border-radius: 12px;
     display: flex;
     padding: 0 5px;
-    background: url();
-  }
+    }
   .vue-table{
-    width: 1122px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
   #vue-table{
-    height: 251px;
-    width: 279px;
+    height: 170px;
+    width: 379px;
     background: #343549;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    margin: 8px;
   }
   #vue-table h3{
 font-size: 13px;
@@ -449,8 +448,8 @@ font-size: 13px;
     text-decoration: none;
   }  
   #vue-table-OC{
-    height: 251px;
-    width: 279px;
+    height: 170px;
+    width: 379px;
     background: #343549;
     display: flex;
     flex-direction: column;
@@ -458,16 +457,6 @@ font-size: 13px;
     align-items: flex-start;
     margin-right: 8px;
     padding: 10px;
-  }
-  #vue-table-OC{
-    height: 251px;
-    width: 279px;
-    background: #343549;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 8px;
   }
   #vue-table-OC h3{
     font-size: 16px;
@@ -483,9 +472,10 @@ font-size: 13px;
   }
 
   #vue-table-OC button{
-    height: 44px;
+    height: 34px;
     width: 115px;
     margin: 5px;
+    font-size: 12px;
   }
   #vue-table-OC .choose h3{
     margin-right: 10px; 
@@ -500,7 +490,7 @@ font-size: 13px;
   }
   .container_search input {
     width: 123px;
-    height: 44px;
+    height: 34px;
     outline: none;
     background: url(../../../public/icons/search\ 2.png) no-repeat center left 12px #28293B;
     padding-left: 36px;
@@ -567,7 +557,7 @@ font-size: 13px;
     justify-content: space-between;
   }
   .choose h3{
-margin-right: 10px;
+  margin-right: 10px;
   }
   
   .choose select {
@@ -603,21 +593,19 @@ margin-right: 10px;
   }
   
   .delete_all button {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin: 0 5px;
     color: #fff;
     background: inherit;
+    font-size: 8px;
     border: 1px solid #515266;
   }
   .delete_all button:first-child{
-   padding-left:7px ;
+   padding-left:2px ;
   }
-  .delete_all button:last-child{
-    padding-left:2px ;
-   }
  }
 </style>

@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue"
-
 const props = defineProps({
   modelValue: {
     type: Boolean,
@@ -9,6 +7,9 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['update:modelValue']);
+const closeModal = () => {
+    emit('update:modelValue', false);
+};
 
 </script>
 
@@ -77,8 +78,8 @@ setCurrentPage(page);<br>
 };<br>
                 </textarea>
             </div>
-            <div class="close">
-                <button>Закрыть</button>
+            <div class="form_close">
+                <button @click="closeModal">Закрыть</button>
             </div>
         </div>
     </div>
@@ -96,7 +97,7 @@ setCurrentPage(page);<br>
     justify-content: center;
     color: #fff;
     position: fixed;
-    padding: 60px;
+    padding: 12px;
 }
 .panel input {
     background: #52536F;
@@ -114,6 +115,8 @@ setCurrentPage(page);<br>
     flex-direction: column;
     padding: 20px;
     border-radius: 12px;
+    position: relative;
+    top: 0;
 }
 .panel_text{
     width: 100%;
@@ -155,14 +158,14 @@ setCurrentPage(page);<br>
     font-size: 14px;
     border-radius: 8px;
 }
-.close{
+.form_close{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 16px;
     padding:0 16px;
 }
-.close button{
+.form_close button{
     width: 198px;
     height: 53px;
     border-radius: 12px;
@@ -173,7 +176,7 @@ setCurrentPage(page);<br>
 }
 
 @media (max-width: 1366px){
-    #Detals{
+    #detals{
         background: rgba(0,0,0,0.5);
         width: 100%;
         height: 100vh;
@@ -181,7 +184,7 @@ setCurrentPage(page);<br>
         justify-content: center;
         color: #fff;
         position: fixed;
-        padding: 10px;
+        padding: 15px;
     }
 .panel input {
     background: #52536F;
@@ -192,6 +195,7 @@ setCurrentPage(page);<br>
 }
 .panel{
     width: 820px;
+    height: 620px;
     background: #343549;
     display: flex;
     justify-content: center;
@@ -237,14 +241,14 @@ setCurrentPage(page);<br>
     color: #fff;
     font-size: 14px;
 }
-.close{
+.form_close{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 16px;
     padding:0 16px;
 }
-.close button{
+.form_close button{
     width: 198px;
     height: 43px;
     border-radius: 12px;

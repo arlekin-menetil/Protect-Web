@@ -78,14 +78,8 @@ input:checked[type='checkbox']:before {
 }
 }
 /*Active Link*/
-.active_purple {
-  background-color: #9f76ff;
+.active_purple{
+  background-color: #6C5DD3;
   border-radius: 12px;
-  color: #fff;
-}
-.active_purple span{
-  color: #fff;
-}
-.active_white{
   color: #fff;
 }

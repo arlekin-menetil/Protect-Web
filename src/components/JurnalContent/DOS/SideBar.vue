@@ -28,13 +28,13 @@ export default {
         <div class="content-menu">
             <nav>
                 <ul>
-                    <li class="">
+                    <li>
                         <a href="/Protect">
                         <span style="margin-right: 8px;" class="material-symbols-outlined"> verified_user</span>
                         <p>Защита контента</p></a>
                         </li>
-                        <li class="jurnal">
-                        <a class="jurnal" href="/Jurnual">
+                        <li class="active_purple">
+                        <a href="/Jurnual">
                             <span style="margin-right: 8px;" class="material-symbols-outlined"> description</span>
                             <p>Журналы угроз</p></a>
                             <ul>
@@ -47,7 +47,7 @@ export default {
                             </ul>
                             </li>
                             <li>
-                            <a class="blacklist" href="/BlackList">
+                            <a href="/BlackList">
                                 <span style="margin-right: 8px;" class="material-symbols-outlined"> block</span>
                                 <p>Черный список</p></a>
                                 <ul style="height: 133px;">
