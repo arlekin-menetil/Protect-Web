@@ -38,7 +38,6 @@ export default {
     },
   },
 };
-import Detals from '@/components/ModalWindow/DetalsPage.vue';
 </script>
 
 <template>

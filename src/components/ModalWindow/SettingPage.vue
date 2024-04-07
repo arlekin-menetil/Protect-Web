@@ -1,4 +1,4 @@
-<script>
+<script setup>
 new Vue({
 
     // Mount Vue instance to DOM with `el`
