@@ -9,26 +9,27 @@ export default {
       search: '',
       reverse: false,
       columns: [
-    { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID' },
-    { icon: ['far', 'user'], icon2: ['fa', 'repeat'], name: 'IP' },
-    { icon: ['far', 'calendar'], icon2:  ['fa', 'repeat'], name: 'Date' },
-    { icon: ['fas', 'share'], icon2: ['fa', 'repeat'], name: 'Redirection' },
-    { icon: ['fa', 'wand-magic-sparkles'], icon2: ['fa', 'repeat'], name: 'Autobahn' },
-    { icon: ['fa', 'cog'], icon2: ['fa', 'repeat'], name: 'Details' }],
-  people: [
-    { ID: 0, IP: '127.0.0.1', Date: '10.05.2024', Redirection: 'Unkown', Autobahn: 'Windows 7'},
-    { ID: 3, IP: '127.0.0.2', Date: '10.05.2023', Redirection: 'Unkown', Autobahn: 'Windows 8'},
-    { ID: 5, IP: '127.0.0.5', Date: '10.05.2021', Redirection: 'Unkown', Autobahn: 'Windows 7'},
-    { ID: 87, IP: '127.0.0.7', Date: '10.05.2020', Redirection: 'Unkown', Autobahn: 'Windows 9'},
-    { ID: 12, IP: '127.0.0.8', Date: '10.05.2025', Redirection: 'Unkown', Autobahn: 'Windows 7'},
-    { ID: 1, IP: '127.0.0.9', Date: '10.05.2026', Redirection: 'Unkown', Autobahn: 'Windows 7'},
-  ],
+        { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID', sort: 'ID'},
+        { icon: ['far', 'user'], icon2: ['fa', 'repeat'], name: 'IP' },
+        { icon: ['far', 'calendar'], icon2:  ['fa', 'repeat'], name: 'Date' },
+        { icon: ['fas', 'globe'], icon2: ['fa', 'repeat'], name: 'Browser' },
+        { icon: ['fa', 'laptop'], icon2: ['fa', 'repeat'], name: 'OS' },
+        { icon: ['fas', 'share'], icon2: ['fa', 'repeat'], name: 'Country' },
+        { icon: ['fa', 'wand-magic-sparkles'], icon2: ['fa', 'repeat'], name: 'Type' },
+        { icon: ['fa', 'cog'], icon2: ['fa', 'repeat'], name: 'Details' }],
+      people: [
+        { ID: 0, IP: '127.0.0.1', Date: '10.05.2024', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
+        { ID: 3, IP: '127.0.0.2', Date: '10.05.2023', Browser: 'Unkown', OS: 'Windows 8', Country: 'United State', Type: '</>SQLI' },
+        { ID: 5, IP: '127.0.0.5', Date: '10.05.2021', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
+        { ID: 87, IP: '127.0.0.7', Date: '10.05.2020', Browser: 'Unkown', OS: 'Windows 9', Country: 'United State', Type: '</>SQLI' },
+        { ID: 12, IP: '127.0.0.8', Date: '10.05.2025', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
+        { ID: 1, IP: '127.0.0.9', Date: '10.05.2026', Browser: 'Unkown', OS: 'Windows 7', Country: 'Brazil', Type: '</>SQLI' },
+      ],
     };
   },
   methods: {
     sortBy(sortKey) {
       this.reverse = this.sortKey === sortKey ? !this.reverse : false;
-      this.sortKey = sortKey;
     },
   },
   computed: {
@@ -66,8 +67,13 @@ export default {
         <thead>
           <tr>
             <th v-for="column in columns" :key="column">
-              <a href="#" @click="sortBy(column)" :class="{ active: sortKey === column }">
-                <font-awesome-icon class="icon" :icon=column.icon /><div>{{ column.name }}</div><font-awesome-icon class="icon" :icon=column.icon2 />
+              <a href="#" :class="{ active: sortKey === column }">
+                <font-awesome-icon class="icon" :icon=column.icon /><div>{{ column.name }}</div><font-awesome-icon class="icon" :icon=column.icon2 @click="() => {
+                  if(column.sort) {
+                    sortKey = column.sort
+                    sortBy(column.sort)
+                  }
+                }"/>
 
               </a>
             </th>
