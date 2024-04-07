@@ -1,7 +1,19 @@
+<script setup>
+import { ref } from "vue"
+
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    default: false
+  }
+})
+
+const emit = defineEmits(['update:modelValue']);
+
+</script>
 
 <template>
-    <div id="Detals">
-        <teleport to='#detals' />
+    <div id="detals" @click.self="() => emit('update:modelValue', false)" v-if="props.modelValue">
         <div class="panel">
             <div class="Article">
                 <h2>Details</h2>
@@ -73,8 +85,11 @@ setCurrentPage(page);<br>
 </template>
 
 <style>
-#Detals{
+#detals{
     background: rgba(0,0,0,0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
     display: flex;
