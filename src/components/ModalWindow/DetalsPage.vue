@@ -80,6 +80,8 @@ setCurrentPage(page);<br>
     display: flex;
     justify-content: center;
     color: #fff;
+    position: fixed;
+    padding: 60px;
 }
 .panel input {
     background: #52536F;
@@ -87,6 +89,7 @@ setCurrentPage(page);<br>
     border: none;
     padding: 10px;
     color: #fff;
+    border-radius: 8px;
 }
 .panel{
     width: 820px;
@@ -95,6 +98,7 @@ setCurrentPage(page);<br>
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    border-radius: 12px;
 }
 .panel_text{
     width: 100%;
@@ -134,6 +138,7 @@ setCurrentPage(page);<br>
     border: none;
     color: #fff;
     font-size: 14px;
+    border-radius: 8px;
 }
 .close{
     width: 100%;
@@ -144,13 +149,94 @@ setCurrentPage(page);<br>
 }
 .close button{
     width: 198px;
+    height: 53px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #6C5DD3;
+    color: #fff;
 }
-/*
+
 @media (max-width: 1366px){
-    .panel{
-        width: 620px;
-        height:620px;
-        background: #343549;
+    #Detals{
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        position: fixed;
+        padding: 10px;
     }
-}*/
+.panel input {
+    background: #52536F;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: #fff;
+}
+.panel{
+    width: 820px;
+    background: #343549;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.panel_text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.Article{
+     margin-bottom: 22px;
+}
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form{
+    display: flex;
+}
+.form input{
+    width: 380px;
+    height: 34px;
+    margin: 5px 0;
+}
+.form-panel{
+    width: 780px;
+}
+.form-panel p{
+    margin: 5px 0;
+}
+.form-panel textarea{
+    outline: none;
+    resize: none;
+    width: 780px;
+    height: 80px;
+    padding: 10px;
+    background: #52536F;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px;
+    padding:0 16px;
+}
+.close button{
+    width: 198px;
+    height: 43px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #6C5DD3;
+    color: #fff;
+}
+}
 </style>
