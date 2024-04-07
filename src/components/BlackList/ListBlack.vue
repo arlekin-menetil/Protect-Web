@@ -81,12 +81,8 @@ export default {
             <td>{{ person.Redirection }}</td>
             <td>{{ person.Autobahn }}</td>
             <td>{{ person.Details }}
-              <button class="detals">
-  
-                Детали
-              </button>
-              <button class="unban">Unban</button>
-              <button class="delete">Delete</button>
+              <button class="detals">Редактировать</button>
+              <button class="delete">Раблокировать</button>
             </td>
           </tr>
         </tbody>
@@ -163,7 +159,7 @@ table td {
 }
 
 table button {
-  width: 70px;
+  width: 130px;
   height: 32px;
   background: none;
   border: none;
@@ -174,17 +170,14 @@ table button {
 }
 
 .detals {
-  background: #6C5DD3;
-}
-
-.unban {
-  background:url(../../../public/icons/ban.svg) no-repeat #4DD137 center left 6px;
-  padding-left: 23px;
+  background: url(../../../public/icons/pencil.svg) no-repeat #6C5DD3;
+  background-position: 5px 4px ;
 }
 
 .delete {
-  background:url(../../../public/icons/ban.svg) no-repeat #C30000 center left 6px;
+  background:url(../../../public/icons/unlock.svg) no-repeat #C30000;
   padding-left: 23px;
+  background-position: 10px 4px;
 }
 
 .container_search {
@@ -233,5 +226,140 @@ table button {
   cursor: pointer;
   margin: 0 5px;
   color: #fff;
+}
+@media(max-width: 1366px) {
+  .container {
+    width: 100%;
+    background: #343549;
+    margin-top: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #vue-table a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  
+  table {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  .container_search input {
+    width: 233px;
+    height: 34px;
+    outline: none;
+    background: url(../../../public/icons/search\ 2.png) no-repeat center left 12px #28293B;
+    padding-left: 36px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  table thead {
+    background: #28293B;
+  }
+  
+  table th {
+    height: 24px;
+  }
+  
+  table a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    width: 100%;
+    height: 20px;
+  }
+  
+  table .icon {
+    padding:0 15px;
+  }
+  
+  table a:first-child {
+    background: url('../../../public/logo/gerb.png');
+  }
+  
+  table td {
+    background: #454659;
+    height: 24px;
+    padding-left: 12px;
+  }
+  
+  table button {
+    width: 130px;
+    height: 25px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 10px;
+  }
+  
+  .detals {
+    background: url(../../../public/icons/pencil.svg) no-repeat #6C5DD3;
+    background-position: 5px 4px ;
+  }
+  
+  .delete {
+    background:url(../../../public/icons/unlock.svg) no-repeat #C30000;
+    padding-left: 23px;
+    background-position: 10px 4px;
+  }
+  
+  .container_search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  .choose {
+    width: 160px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .choose select {
+    width: 99px;
+    height: 34px;
+    border-radius: 10px;
+    background: #28293B;
+    color: #fff;
+    padding-left: 5px;
+  }
+  
+  .choose option {
+    height: 100%;
+  }
+  .delete_all {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .delete_all button {
+    background:url(../../../public/icons/trash.svg) no-repeat #C30000 center left 24px;
+    padding-left: 30px;
+    width: 170px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #fff;
+  }
 }
 </style>

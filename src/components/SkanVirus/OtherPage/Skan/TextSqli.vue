@@ -1,24 +1,28 @@
 <script setup>
-import DataTable from '@/components/BlackList/ListBlack.vue'
-import IPBlock from '@/components/BlackList/IpBlock.vue'
+import DataTable from '@/components/SkanVirus/OtherPage/Skan/SkanList.vue'
+import Text_button from '@/components/SkanVirus/OtherPage/Skan/NoData.vue'
 </script>
 
 <template>
     <div class="jquery">
-        <h2>Черный список IP</h2>
+        <h2>Сканер вирусов</h2>
+        <Text_button />
         <DataTable />
-        <IPBlock />
     </div>
 </template>
 
 <style>
 .jquery {
     width: 100%;
-    height: 143px;
+    height: 100%;
     position: relative;
     top: 0;
     padding: 32px 32px 16px 32px;
     color: #fff;
+}
+
+.jquery h2 {
+    margin-bottom: 16px;
 }
 
 .juquery_content {

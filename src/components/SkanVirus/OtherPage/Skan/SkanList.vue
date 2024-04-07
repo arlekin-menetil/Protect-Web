@@ -9,21 +9,18 @@ export default {
       search: '',
       reverse: false,
       columns: [
-        { icon: ['fa', 'bars'], icon2: ['fas', 'arrow-down-wide-short'], name: 'ID' },
-        { icon: ['far', 'user'], icon2: ['fa', 'repeat'], name: 'IP' },
-        { icon: ['far', 'calendar'], icon2:  ['fa', 'repeat'], name: 'Date' },
-        { icon: ['fas', 'globe'], icon2: ['fa', 'repeat'], name: 'Browser' },
-        { icon: ['fa', 'laptop'], icon2: ['fa', 'repeat'], name: 'OS' },
-        { icon: ['fa', 'flag'], icon2: ['fa', 'repeat'], name: 'Country' },
-        { icon: ['fa', 'file'], icon2: ['fa', 'repeat'], name: 'Type' },
-        { icon: ['fa', 'cog'], icon2: ['fa', 'repeat'], name: 'Details' }],
+        { icon: [], icon2: ['fas', 'arrow-down-wide-short'], name: 'Infected file' },
+        { icon: [], icon2: ['fa', 'repeat'], name: 'Description of the information security threat' },
+        { icon: [], icon2:  ['fa', 'repeat'], name: 'Occurrences' },
+        { icon: [], icon2:  ['fa', 'repeat'], name: 'Permission' },
+        { icon: [], icon2: ['fa', 'repeat'], name: 'Details' }],
       people: [
-        { ID: 0, IP: '127.0.0.1', Date: '10.05.2024', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
-        { ID: 3, IP: '127.0.0.2', Date: '10.05.2023', Browser: 'Unkown', OS: 'Windows 8', Country: 'United State', Type: '</>SQLI' },
-        { ID: 5, IP: '127.0.0.5', Date: '10.05.2021', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
-        { ID: 87, IP: '127.0.0.7', Date: '10.05.2020', Browser: 'Unkown', OS: 'Windows 9', Country: 'United State', Type: '</>SQLI' },
-        { ID: 12, IP: '127.0.0.8', Date: '10.05.2025', Browser: 'Unkown', OS: 'Windows 7', Country: 'United State', Type: '</>SQLI' },
-        { ID: 1, IP: '127.0.0.9', Date: '10.05.2026', Browser: 'Unkown', OS: 'Windows 7', Country: 'Brazil', Type: '</>SQLI' },
+        { IF: 0, DOTIST: '127.0.0.1', Occurrences: '10.05.2024', Permission: 'Unkown' },
+        { IF: 3, DOTIST: '127.0.0.2', Occurrences: '10.05.2023', Permission: 'Unkown' },
+        { IF: 5, DOTIST: '127.0.0.5', Occurrences: '10.05.2021', Permission: 'Unkown' },
+        { IF: 87, DOTIST: '127.0.0.7', Occurrences: '10.05.2020', Permission: 'Unkown' },
+        { IF: 12, DOTIST: '127.0.0.8', Occurrences: '10.05.2025', Permission: 'Unkown' },
+        { IF: 1, DOTIST: '127.0.0.9', Occurrences: '10.05.2026', Permission: 'Unkown' },
       ],
     };
   },
@@ -36,7 +33,7 @@ export default {
   computed: {
     sortedPeople() {
       return this.people
-        .filter((person) => person.ID.toString().includes(this.search.toLowerCase()))
+        .filter((person) => person.IF.toString().includes(this.search.toLowerCase()))
         .sort((a, b) => {
           const modifier = this.reverse ? -1 : 1;
           if (a[this.sortKey] < b[this.sortKey]) return -1 * modifier;
@@ -56,9 +53,9 @@ export default {
         <div class="choose">
           <h3>Show</h3>
           <select name="select" id="">
-            <option value="10">10</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
+            <option value="10">10 entries</option>
+            <option value="50">50 entries</option>
+            <option value="100">100 entries</option>
           </select>
         </div>
         <input type="text" v-model="search" placeholder="Search:" class="form-control" />
@@ -76,29 +73,19 @@ export default {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="person in sortedPeople" :key="person.ID">
-            <td>{{ person.ID }}</td>
-            <td>{{ person.IP }}</td>
-            <td>{{ person.Date }}</td>
-            <td>{{ person.Browser }}</td>
-            <td>{{ person.OS }}</td>
-            <td>{{ person.Country }}</td>
-            <td>{{ person.Type }}</td>
+          <tr v-for="person in sortedPeople" :key="person.IF">
+            <td>{{ person.IF }}</td>
+            <td>{{ person.DOTIST }}</td>
+            <td>{{ person.Occurrences }}</td>
+            <td>{{ person.Permission }}</td>
             <td>{{ person.Details }}
-              <button class="detals">
-  
-                Детали
-              </button>
-              <button class="unban">Unban</button>
-              <button class="delete">Delete</button>
+              <button class="detals">Открыть</button>
+              <button class="unban">Подробнее</button>
+              <button class="delete">Игнорировать</button>
             </td>
           </tr>
         </tbody>
       </table>
-      <div class="delete_all">
-        <h3>Showing 1 to 1 of 1 entries</h3>
-        <button>Удалить все</button>
-      </div>
     </div>
   </div>
 </template>
@@ -108,7 +95,7 @@ export default {
   width: 100%;
   height: auto;
   background: #343549;
-  margin-top: 72px;
+  margin-top: 52px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -162,7 +149,7 @@ table a:first-child {
 
 table td {
   background: #454659;
-  height: 52px;
+  height: 32px;
   padding-left: 12px;
 }
 
@@ -182,13 +169,12 @@ table button {
 }
 
 .unban {
-  background:url(../../../public/icons/ban.svg) no-repeat #4DD137 center left 6px;
-  padding-left: 23px;
+  background:#4DD137;
 }
 
 .delete {
-  background:url(../../../public/icons/ban.svg) no-repeat #C30000 center left 6px;
-  padding-left: 23px;
+  width: 84px; 
+  background:#C30000;
 }
 
 .container_search {
@@ -196,12 +182,12 @@ table button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
+  padding: 10px 20px;
 }
 
 .choose {
   width: 160px;
-  height: 44px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -218,25 +204,6 @@ table button {
 
 .choose option {
   height: 100%;
-}
-
-.delete_all {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 32px 20px;
-}
-
-.delete_all button {
-  background:url(../../../public/icons/trash.svg) no-repeat #C30000 center left 24px;
-  padding-left: 30px;
-  width: 170px;
-  height: 44px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 0 5px;
-  color: #fff;
 }
 @media(max-width: 1366px) {
   .container {
@@ -319,12 +286,12 @@ table button {
   }
   
   .unban {
-    background:url(../../../public/icons/ban.svg) no-repeat #4DD137 center left 6px;
+    background:#4DD137;
   }
   
   .delete {
     width: 84px; 
-    background:url(../../../public/icons/trash.svg) no-repeat #C30000 center left 6px;
+    background: #C30000;
   }
   
   .container_search {
@@ -354,25 +321,6 @@ table button {
   
   .choose option {
     height: 100%;
-  }
-  .delete_all {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-  
-  .delete_all button {
-    background:url(../../../public/icons/trash.svg) no-repeat #C30000 center left 24px;
-    padding-left: 30px;
-    width: 170px;
-    height: 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 0 5px;
-    color: #fff;
   }
 }
 </style>

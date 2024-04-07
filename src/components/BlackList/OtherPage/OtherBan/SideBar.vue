@@ -18,7 +18,7 @@ export default {
     <aside :class="{ close: isSidebarClosed, open: !isSidebarClosed }" class="close">
         <div class="up-menu">
         <div class="logo" >
-            <div class="logo_img"><img src="../../../../public/logo/gerb.png" alt=""></div>
+            <div class="logo_img"><img src="../../../../../public/logo/gerb.png" alt=""></div>
             <p>"PROTECTION WEB APPS FROM <br>WEB VIRUSES"</p>
         </div>
         <div @click="toggleSidebar" class="doble_arrow">
@@ -104,6 +104,8 @@ opacity: 0;
 /**/
 .open {
     width: 254px;
+    position: absolute;
+    z-index: 1;
   }
 .open .up-menu{
     border: none;

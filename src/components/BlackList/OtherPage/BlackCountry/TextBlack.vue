@@ -6,7 +6,7 @@ import IPBlock from '@/components/BlackList/OtherPage/BlackCountry/IpBlock.vue'
 
 <template>
     <div class="jquery">
-        <h2>Защита контента</h2>
+        <h2>Баны для стран</h2>
         <DataTable />
         <NoData />
         <IPBlock />

@@ -91,4 +91,70 @@
     font-size: 14px;
     color: #fff;
   }
+  @media(max-width: 1366px){
+    
+    .Ip_block{
+        background: #343549;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 5px;
+        padding-top: 5px;
+        padding-left: 20px;
+    }
+    .block{
+        width: 100%;
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 0 20px;
+    
+    }
+    .block h4{
+        margin-bottom: 10px;
+    }
+    .block input{
+        width: 140px;
+        height: 30px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        background: #28293B;
+        color: #fff;
+    }
+    .block select{
+        width: 140px;
+        height: 30px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        background: #28293B;
+        color: #fff;
+    }
+    .block button:last-child {
+        color: #6C5DD3;
+        border: 2px solid #6C5DD3;
+        width: 140px;
+        height: 34px;
+        border-radius: 8px;
+        background: inherit;
+        cursor: pointer;
+    }
+    .block button:first-child {
+        background:#C30000;
+        width: 140px;
+        height: 34px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0 5px;
+        font-size: 14px;
+        color: #fff;
+      }
+      }
 </style>

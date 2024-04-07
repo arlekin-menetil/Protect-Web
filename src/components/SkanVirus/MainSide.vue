@@ -1,5 +1,5 @@
 <script setup>
-import jquery from '@/components/ProtectContent/JqueryFun.vue'
+import SkanVirus from '@/components/SkanVirus/OtherPage/SkanVirus.vue'
 </script>
 
 <template>
@@ -12,11 +12,11 @@ import jquery from '@/components/ProtectContent/JqueryFun.vue'
                 </div>
                 <div class="HeadSetting">
                     <a href="#">Посмотреть Сайт</a>
-                    <a href="#"><img style="margin-right:3.5px" src="../../../public/icons/settings1.svg"
+                    <a href="/Setting"><img style="margin-right:3.5px" src="../../../public/icons/settings1.svg"
                             alt="">Настройки</a>
                 </div>
             </div>
-            <jquery />
+            <SkanVirus />
         </div>
 
     </div>

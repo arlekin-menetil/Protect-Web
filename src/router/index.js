@@ -58,11 +58,6 @@ const router = createRouter({
       component: () => import('../../src/components/JurnalContent/OtherPages/SpamPage.vue')
     },
     {
-      path: '/SqliPage',
-      name: 'SqliPage',
-      component: () => import('../../src/components/JurnalContent/OtherPages/SqliPage.vue')
-    },
-    {
       path: '/BlackList',
       name: 'BlackList',
       component: () => import('../views/BlackList.vue')
@@ -86,6 +81,16 @@ const router = createRouter({
       path: '/SkanVirus',
       name: 'SkanVirus',
       component: () => import('../views/SkanVirus.vue')
+    },
+    {
+      path: '/Setting',
+      name: 'Setting',
+      component: () => import('../views/SettingPage.vue')
+    },
+    {
+      path: '/Detals',
+      name: 'Detals',
+      component: () => import('../../src/components/ModalWindow/DetalsPage.vue')
     },
   ]
 })

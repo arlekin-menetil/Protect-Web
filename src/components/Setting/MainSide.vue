@@ -1,5 +1,5 @@
 <script setup>
-import SqliList from '@/components/JurnalContent/OtherLog/TextOtherLogi.vue';
+import DivBox from '@/components/Setting/BlockSetting.vue'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import SqliList from '@/components/JurnalContent/OtherLog/TextOtherLogi.vue';
                             alt="">Настройки</a>
                 </div>
             </div>
-            <SqliList />
+            <DivBox />
         </div>
 
     </div>
@@ -25,7 +25,7 @@ import SqliList from '@/components/JurnalContent/OtherLog/TextOtherLogi.vue';
 <style>
 .content-protect {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: "Inter", sans-serif;
     display: flex;
 }

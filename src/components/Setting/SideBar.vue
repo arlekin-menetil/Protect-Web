@@ -18,7 +18,7 @@ export default {
     <aside :class="{ close: isSidebarClosed, open: !isSidebarClosed }" class="close">
         <div class="up-menu">
         <div class="logo" >
-            <div class="logo_img"><img src="../../../public/logo/gerb.png" alt=""></div>
+            <div class="logo_img"><img src="../../../../public/logo/gerb.png" alt=""></div>
             <p>"PROTECTION WEB APPS FROM <br>WEB VIRUSES"</p>
         </div>
         <div @click="toggleSidebar" class="doble_arrow">
@@ -39,7 +39,7 @@ export default {
                             <p>Журналы угроз</p></a>
                             <ul>
                                 <li><a href="/AllLogi">Все логи</a></li>
-                                <li><a href="/SqliPage">SQLI логи</a></li>
+                                <li><a href="/AllSqli">SQLI логи</a></li>
                                 <li><a href="/DosPage">ДОС</a></li>
                                 <li><a href="/SpamPage">Спам логи</a></li>
                                 <li><a href="/LogiProxy">Логи прокси</a></li>
@@ -72,8 +72,7 @@ export default {
 
 aside {
 position: relative;
-width: 254px;
-height: 100%;
+height: 100vh;
 top: 0;
 left: 0;
 background: #343549;
@@ -203,11 +202,12 @@ border-radius: 12px;
 }
 
 aside nav ul li:hover ul{
-    position: absolute;
     display: flex;
     transition: 0.5s ease;
     animation: 300ms ease-in-out forwards;
     transform-origin: top center;
+    position: absolute;
+    z-index: 1;
 }
 
 aside nav ul ul li a:hover{
@@ -215,7 +215,7 @@ background: none;
 }
 aside .doble_arrow{
     position: absolute;
-    top:px;
+    top: 10px;
     right: 10px;
     cursor: pointer;
     background: #28293B;

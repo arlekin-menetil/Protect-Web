@@ -19,7 +19,7 @@ import IPBlock from '@/components/BlackList/OtherPage/OtherBan/IpBlock.vue'
     top: 0;
     padding: 32px 32px 16px 32px;
     color: #fff;
-}
+    }
 
 .juquery_content {
     height: 93px;
