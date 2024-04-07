@@ -1,11 +1,12 @@
 <script>
-
+import DetalsPage from '@/components/ModalWindow/DetalsPage.vue';
 
 export default {
   
   data() {
     return {
       sortKey: '',
+      isDetailModalClosed: false,
       search: '',
       reverse: false,
       columns: [
@@ -24,11 +25,17 @@ export default {
       ],
     };
   },
+  components: {
+    DetalsPage
+  },
   methods: {
     sortBy(sortKey) {
       this.reverse = this.sortKey === sortKey ? !this.reverse : false;
       this.sortKey = sortKey;
     },
+    modalOpen() {
+      this.isDetailModalClosed = !this.isDetailModalClosed;
+    }
   },
   computed: {
     sortedPeople() {
@@ -79,7 +86,7 @@ export default {
             <td>{{ person.Occurrences }}</td>
             <td>{{ person.Permission }}</td>
             <td>{{ person.Details }}
-              <button class="detals">Открыть</button>
+              <button class="detals" @click="modalOpen">Открыть</button>
               <button class="unban">Подробнее</button>
               <button class="delete">Игнорировать</button>
             </td>
@@ -88,6 +95,7 @@ export default {
       </table>
     </div>
   </div>
+  <DetalsPage v-model="isDetailModalClosed"/>
 </template>
 
 <style scoped>
