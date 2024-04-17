@@ -85,6 +85,7 @@
 .box{
     display: flex;
     justify-content: space-around;
+
 }
 .first-box{
     display: flex;
@@ -93,7 +94,8 @@
     height: 518px;
     background: #343549;
     padding: 20px;
-    border-bottom: 1px solid #292A36; 
+    border-bottom: 1px solid #292A36;
+    border-radius: 12px; 
 }
 .contect{
     display: flex;

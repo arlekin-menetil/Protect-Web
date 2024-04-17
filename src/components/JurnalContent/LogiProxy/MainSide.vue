@@ -12,7 +12,7 @@ import LogiList from '@/components/JurnalContent/LogiProxy/TextLogi.vue';
                 </div>
                 <div class="HeadSetting">
                     <a href="#">Посмотреть Сайт</a>
-                    <a href="/Setting"><img style="margin-right:3.5px" src="../../../public/icons/settings1.svg"
+                    <a href="/Setting"><img style="margin-right:3.5px" src="/public/icons/settings1.svg"
                             alt="">Настройки</a>
                 </div>
             </div>
